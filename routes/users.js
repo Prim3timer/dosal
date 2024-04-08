@@ -5,7 +5,11 @@ let getAllUsers = async (req, res)=> {
     // let data = await readFile(filePath2, 'utf-8')
     const users = await User.find()
     if (!users) res.status(204).json({'message': 'no employees found'})
+<<<<<<< HEAD
     res.json(users)
+=======
+    res.json({users})
+>>>>>>> 352e69db99ff41b6d36e578e93dddae69915c399
    
 }
 

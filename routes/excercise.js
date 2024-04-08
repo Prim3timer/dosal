@@ -1,6 +1,5 @@
 const router = require('express').Router()
-let Excercise = require('../modules/excercise.model')
-// import { useParams } from 'react-router-dom'
+let Excercise = require('../modules/excercise.model')   
 
 let getAllExcercise = async (req, res)=> {
     // let data = await readFile(filePath2, 'utf-8')

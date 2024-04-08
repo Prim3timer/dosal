@@ -3,6 +3,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const excerciseRouter = require('./routes/excercise')
 const usersRouter = require('./routes/users')
+const resultRouter = require('./routes/result')
 
 require('dotenv').config()
 const app = express()   
@@ -21,6 +22,7 @@ connection.once('open', ()=> {
 
 app.use('/excercises', excerciseRouter)
 app.use('/users', usersRouter)
+app.use('/results', resultRouter)
 
 app.listen(port, ()=> {
     console.log('listening on port', port)

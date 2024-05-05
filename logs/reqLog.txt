@@ -1,0 +1,6 @@
+20240505	13:22:50	ae4f4edf-a781-453e-b271-46d77644eb1f	GET	http://localhost:3000	/excercises
+20240505	13:22:51	fed8c9cc-26bf-408e-b2c9-bb0df24360b6	GET	http://localhost:3000	/excercises
+20240505	13:23:14	0d73fdb2-4769-467a-bbf2-c7541ab73bcd	GET	http://localhost:3000	/excercisess
+20240505	13:23:18	e3c37b72-1347-43e3-b2a1-82959816c5f3	GET	http://localhost:3000	/excercisess
+20240505	13:23:18	a7897c08-5aea-4e1b-8ab5-32591761bc1a	GET	http://localhost:3000	/excercisess
+20240505	13:23:32	26bfc8a7-3324-414f-b3f3-f8a4d6a4ff5f	GET	http://localhost:3000	/excercises

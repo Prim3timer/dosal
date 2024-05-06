@@ -13,7 +13,6 @@ const app = express()
 const port = process.env.PORT || 5000
 app.use(cors())
 app.use(express.json())
-app.use(logger)
 const uri = process.env.ATLAS_URI
 mongoose.connect(uri)
 
@@ -27,6 +26,7 @@ app.use('/excercises', excerciseRouter)
 app.use('/users', usersRouter)
 app.use('/results', resultRouter)
 
+app.use(logger)
 app.use(errorHandler);
 
 app.listen(port, ()=> {

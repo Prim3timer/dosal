@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const Result = require('../modules/result.model')
-const MongoReq = require('../modules/mongoReq.model')
 const { format } = require('date-fns');
 const { v4: uuid } = require('uuid');
 
@@ -22,15 +21,6 @@ const generateQuestions = async (req, res)=> {
             date: req.body.date
         })
         
-        const dateTime = `${format(new Date(), 'yyyyMMdd\tHH:mm:ss')}`;
-    const logItem = `date:  ${dateTime}
-    id: ${uuid()} 
-     method: ${req.method} 
-     origin: ${req.headers.origin} 
-     address: ${req.url}`;
-    MongoReq.create({
-        log: logItem
-    })
     
         res.status(201).send(`Question Added`)
     } catch (error) {

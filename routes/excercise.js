@@ -11,15 +11,7 @@ let getAllExcercise = async (req, res)=> {
     if (!excercise) res.status(204).json({'message': 'no excercise found'})
     res.status(201).json({excercise})
 
-    const dateTime = `${format(new Date(), 'yyyyMMdd\tHH:mm:ss')}`;
-    const logItem = `date:  ${dateTime}
-    id: ${uuid()} 
-     method: ${req.method} 
-     origin: ${req.headers.origin} 
-     address: ${req.url}`;
-    MongoReq.create({
-        log: logItem
-    })
+    
     
 }
 

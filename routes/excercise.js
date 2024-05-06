@@ -1,11 +1,26 @@
 const router = require('express').Router()
 let Excercise = require('../modules/excercise.model')   
+const MongoReq = require('../modules/mongoReq.model')
+const { format } = require('date-fns');
+const { v4: uuid } = require('uuid');
+
 
 let getAllExcercise = async (req, res)=> {
     // let data = await readFile(filePath2, 'utf-8')
     const excercise = await Excercise.find()
     if (!excercise) res.status(204).json({'message': 'no excercise found'})
     res.status(201).json({excercise})
+
+    const dateTime = `${format(new Date(), 'yyyyMMdd\tHH:mm:ss')}`;
+    const logItem = `date:  ${dateTime}
+    id: ${uuid()} 
+     method: ${req.method} 
+     origin: ${req.headers.origin} 
+     address: ${req.url}`;
+    MongoReq.create({
+        log: logItem
+    })
+    
 }
 
 let getAnExcercise = async(req, res) => {

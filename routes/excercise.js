@@ -67,6 +67,9 @@ let updateExcercise = async (req, res) =>{
     res.json(currentExcercise)
 }
 
+    
+
+
 let deleteExcercise = async (req, res) => {
     let id = req.params.id
     await Excercise.deleteOne({_id: id})
